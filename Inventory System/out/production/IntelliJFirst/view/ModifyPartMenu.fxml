@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyPartMenuController">
+   <children>
+      <Label layoutX="55.0" layoutY="55.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="modPartHouseRadio" layoutX="160.0" layoutY="55.0" mnemonicParsing="false" onAction="#onActionModPartIn" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="modInOut" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="modPartOutRadio" layoutX="300.0" layoutY="55.0" mnemonicParsing="false" onAction="#onActionModPartOut" text="Outsourced" toggleGroup="$modInOut"/>
+      <Label layoutX="65.0" layoutY="115.0" text="ID" />
+      <Label layoutX="65.0" layoutY="160.0" text="Name" />
+      <Label layoutX="65.0" layoutY="205.0" text="Inv" />
+      <Label layoutX="65.0" layoutY="250.0" text="Price/Cost" />
+      <Label layoutX="65.0" layoutY="295.0" text="Max" />
+      <Label fx:id="modMachineOrCompany" layoutX="65.0" layoutY="340.0" />
+      <TextField fx:id="modifyPartID" disable="true" layoutX="160.0" layoutY="111.0" />
+      <TextField fx:id="modifyPartName" layoutX="160.0" layoutY="156.0" />
+      <TextField fx:id="modifyPartInv" layoutX="160.0" layoutY="201.0" />
+      <TextField fx:id="modifyPartPrice" layoutX="160.0" layoutY="246.0" />
+      <TextField fx:id="modifyPartMax" layoutX="160.0" layoutY="291.0" />
+      <TextField fx:id="modifyPartMachineIdOrCompany" layoutX="160.0" layoutY="336.0" />
+      <Label layoutX="350.0" layoutY="295.0" text="Min" />
+      <TextField fx:id="modifyPartMin" layoutX="400.0" layoutY="291.0" />
+      <Button fx:id="modPartSaveButton" layoutX="340.0" layoutY="407.0" mnemonicParsing="false" onAction="#onActionSaveModPart" text="Save" />
+      <Button fx:id="modPartCancelButton" layoutX="400.0" layoutY="407.0" mnemonicParsing="false" onAction="#onActionCancelModPart" text="Cancel" />
+   </children>
+</AnchorPane>
